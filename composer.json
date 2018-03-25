@@ -4,15 +4,9 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/eneav/laravel-authorization"
-        }
-    ],
     "require": {
         "php": "^7.1.3",
-        "enea/laravel-authorization": "dev-develop",
+        "enea/laravel-authorization": "^0.0.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0"
