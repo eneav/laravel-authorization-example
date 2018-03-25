@@ -2,10 +2,10 @@
 
 namespace App;
 
+use Enea\Authorization\Models\User as Authorizable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authorizable
 {
     use Notifiable;
 
