@@ -11,16 +11,20 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::query()->create([
-            'name' => 'enea',
-            'email' => 'hello@enea.io',
-            'password' => bcrypt('nano'),
-        ]);
+        $users = [
+            'hello',
+            'user',
+            'editor',
+            'creator',
+            'destroyer',
+        ];
 
-        \App\User::query()->create([
-            'name' => 'user',
-            'email' => 'user@enea.io',
-            'password' => bcrypt('nano'),
-        ]);
+        foreach ($users as $user) {
+            \App\User::query()->create([
+                'name' => $user,
+                'email' => "{$user}@enea.io",
+                'password' => bcrypt('nano'),
+            ]);
+        }
     }
 }
