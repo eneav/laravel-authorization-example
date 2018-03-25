@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Enea\Authorization\Exceptions\UnauthorizedOwnerException;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -48,6 +49,10 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof UnauthorizedOwnerException) {
+            return redirect()->route('unauthorized');
+        }
+
         return parent::render($request, $exception);
     }
 }

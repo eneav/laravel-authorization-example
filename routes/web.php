@@ -40,3 +40,7 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         $router->delete('{article}/destroy', 'Articles\DeleteController@destroy')->name('articles.destroy')->middleware('authenticated.can:destroy-articles');
     });
 });
+
+$router->get('unauthorized', function () {
+    return view('unauthorized');
+})->name('unauthorized');
