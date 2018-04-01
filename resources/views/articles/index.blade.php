@@ -32,18 +32,19 @@
 
                 {{-- options --}}
                 <td class="text-right">
-                    @if($user->can('modify-articles'))
+                    @authenticatedCan('modify-articles')
                         <a class="btn btn-sm btn-warning"
                            href="{{ route('articles.edit', $article) }}">
                             <i class="fas fa-pencil-alt"></i>
                         </a>
-                    @endif
-                    @if($user->can('destroy-articles'))
+                    @endauthenticatedCan
+
+                    @authenticatedCan('destroy-articles')
                         <a class="btn btn-sm btn-danger"
                            href="{{ route('articles.delete', $article) }}">
                             <i class="fas fa-trash-alt"></i>
                         </a>
-                    @endif
+                    @endauthenticatedCan
                 </td>
             </tr>
         @endforeach
