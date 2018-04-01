@@ -11,7 +11,7 @@ return [
       |
       | Supported: "database"
       */
-    'driver' => 'database',
+    'driver' => 'cache',
 
     'models' => [
         /*
