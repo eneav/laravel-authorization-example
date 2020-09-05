@@ -1,4 +1,4 @@
-# Implementation of roles and permissions in laravel 5
+# Implementation of roles and permissions in laravel 7
 
 Example of implementation of roles and permissions in laravel using the [ laravel-authorization](https://github.com/eneav/laravel-authorization) package
 
